@@ -17,7 +17,7 @@ type updatePropsType = {
 
 function App() {
   const [a_rate, setARate] = useState(1500);
-  const [b_rate, setBRate] = useState(1700);
+  const [b_rate, setBRate] = useState(1500);
 
   //第一引数のプレイヤーが第二引数のプレイヤーに勝利する確率を返す関数
   const caliculate_probability = (props: calProbPropsType) => {
