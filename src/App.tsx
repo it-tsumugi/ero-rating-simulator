@@ -54,29 +54,25 @@ function App() {
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Routes>
-        <Route path="/">
-          <ComponentContaier>
-            <h1 style={{ margin: 0 }}>イローレーティングシミュレータ</h1>
-            <PlayersConainer>
-              <Player>
-                <div>{"プレイヤーAのレート : " + a_rate}</div>
-                <h2>プレイヤーA</h2>
-                <button onClick={() => update_rating({ winner: "a" })}>
-                  プレイヤーAの勝利
-                </button>
-              </Player>
-              <Player>
-                <div>{"プレイヤーBのレート : " + b_rate}</div>
-                <h2>プレイヤーB</h2>
-                <button onClick={() => update_rating({ winner: "b" })}>
-                  プレイヤーBの勝利
-                </button>
-              </Player>
-            </PlayersConainer>
-          </ComponentContaier>
-        </Route>
-      </Routes>
+      <ComponentContaier>
+        <h1 style={{ margin: 0 }}>イローレーティングシミュレータ</h1>
+        <PlayersConainer>
+          <Player>
+            <div>{"プレイヤーAのレート : " + a_rate}</div>
+            <h2>プレイヤーA</h2>
+            <button onClick={() => update_rating({ winner: "a" })}>
+              プレイヤーAの勝利
+            </button>
+          </Player>
+          <Player>
+            <div>{"プレイヤーBのレート : " + b_rate}</div>
+            <h2>プレイヤーB</h2>
+            <button onClick={() => update_rating({ winner: "b" })}>
+              プレイヤーBの勝利
+            </button>
+          </Player>
+        </PlayersConainer>
+      </ComponentContaier>
     </BrowserRouter>
   );
 }
